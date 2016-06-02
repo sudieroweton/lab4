@@ -4,4 +4,16 @@
 #Lab 4 - temp
 #CS 3030 Scripting Languages
 
+#fahrenheit to celsius function
+def fahrenheitToCelsius(fahrenheit):
+	return ((fahrenheit - 32.0) * (5.0 / 9.0))
 
+#celsius to fahrenheit function
+def celsiusToFahrenheit(celsius):
+	return ((9.0/5.0) * celsius + 32.0)
+
+#print welcome message
+print("Welcome to the CS 3030 Temperature Conversion Program")
+
+#testing 
+print("\n56.2 degrees Fahrenheit equals %.2f" % (fahrenheitToCelsius(56.2)))

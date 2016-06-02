@@ -13,7 +13,43 @@ def celsiusToFahrenheit(celsius):
 	return ((9.0/5.0) * celsius + 32.0)
 
 #print welcome message
-print("Welcome to the CS 3030 Temperature Conversion Program")
+print("\nWelcome to the CS 3030 Temperature Conversion Program")
 
 #testing 
-print("\n91.8 degrees Celsius equals %.1f" % (celsiusToFahrenheit(91.8)))
+#print("\n91.8 degrees Celsius equals %.1f" % (celsiusToFahrenheit(91.8)))
+
+while True:
+	#Print main menu with '3' to quit
+   print("\nMain Menu")
+   print("\n1:Fahrenheit to Celsius")
+   print("2:Celsius to Fahrenheit")
+   print("3:Exit program")
+   x = raw_input("\nPlease enter 1, 2, or 3:")
+   if x == "3":
+      exit(0)	
+	
+   try:
+	 x = int(x)
+	 if x == 1:
+	    numf = raw_input("\nPlease enter degrees Fahrenheit:")
+	    try:
+	      numf = float(numf)
+	      print("\n%.1f degrees Fahrenheit equals %.1f degrees Celsius" % (numf, fahrenheitToCelsius(numf)))
+	    except:
+	      print("\nInvalid Entry")
+	      continue
+	 if x == 2:
+	    numc = raw_input("\nPlease enter degrees Celsius:")
+	    try:
+	      numc = float(numc)
+	      print("\n%.1f degrees Celsius equals %.1f degrees Fahrenheit" % (numc, celsiusToFahrenheit(numc)))
+	    except:
+	      print("Invalid Entry")
+              continue
+	 if x != 1 and x != 2:
+	    print("\nInvalid Entry")
+	    continue
+   except:
+		print("Invalid Entry")
+		continue
+		

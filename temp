@@ -16,4 +16,4 @@ def celsiusToFahrenheit(celsius):
 print("Welcome to the CS 3030 Temperature Conversion Program")
 
 #testing 
-print("\n56.2 degrees Fahrenheit equals %.2f" % (fahrenheitToCelsius(56.2)))
+print("\n91.8 degrees Celsius equals %.1f" % (celsiusToFahrenheit(91.8)))

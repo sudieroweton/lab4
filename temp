@@ -4,6 +4,7 @@
 #Lab 4 - temp
 #CS 3030 Scripting Languages
 
+
 #fahrenheit to celsius function
 def fahrenheitToCelsius(fahrenheit):
 	return ((fahrenheit - 32.0) * (5.0 / 9.0))
@@ -12,32 +13,41 @@ def fahrenheitToCelsius(fahrenheit):
 def celsiusToFahrenheit(celsius):
 	return ((9.0/5.0) * celsius + 32.0)
 
+#main program start
+
 #print welcome message
 print("\nWelcome to the CS 3030 Temperature Conversion Program")
 
-#testing 
-#print("\n91.8 degrees Celsius equals %.1f" % (celsiusToFahrenheit(91.8)))
-
+#loop until '3' to exit for the temp converter
 while True:
-	#Print main menu with '3' to quit
+
+   #Print main menu
    print("\nMain Menu")
-   print("\n1:Fahrenheit to Celsius")
+   print("1:Fahrenheit to Celsius")
    print("2:Celsius to Fahrenheit")
    print("3:Exit program")
-   x = raw_input("\nPlease enter 1, 2, or 3:")
+
+   #read in user input and exit immediately if '3' 
+   x = raw_input("\nPlease enter 1, 2 or 3")
    if x == "3":
       exit(0)	
-	
+
+   #exception handling to make sure an int was input by the user
    try:
 	 x = int(x)
+
+	#convert from fahrenheit to celsius
 	 if x == 1:
 	    numf = raw_input("\nPlease enter degrees Fahrenheit:")
+	   
 	    try:
 	      numf = float(numf)
 	      print("\n%.1f degrees Fahrenheit equals %.1f degrees Celsius" % (numf, fahrenheitToCelsius(numf)))
 	    except:
 	      print("\nInvalid Entry")
 	      continue
+
+	 #convert from celsius to fahrenheit
 	 if x == 2:
 	    numc = raw_input("\nPlease enter degrees Celsius:")
 	    try:
@@ -46,6 +56,8 @@ while True:
 	    except:
 	      print("Invalid Entry")
               continue
+
+	 #consider the case of not entering 1 or 2
 	 if x != 1 and x != 2:
 	    print("\nInvalid Entry")
 	    continue
